@@ -4,23 +4,23 @@
 */
 
 enum WeekDay {
-  Monday = 'MON',
-  Tuesday = 'TUE',
-  Wednesday = 'WED',
-  Thursday = 'THU',
-  Friday = 'FRI',
-  Saturday = 'SAT',
-  Sunday = 'SUN',
+  Monday = "MON",
+  Tuesday = "TUE",
+  Wednesday = "WED",
+  Thursday = "THU",
+  Friday = "FRI",
+  Saturday = "SAT",
+  Sunday = "SUN",
 }
 
 function isWeekend(day: WeekDay): boolean {
-  return day === WeekDay.Saturday || day === WeekDay.Sunday
+  return day === WeekDay.Saturday || day === WeekDay.Sunday;
 }
 
 if (isWeekend(WeekDay.Saturday || WeekDay.Sunday)) {
-  console.log('Weekend!');
+  console.log("Weekend!");
 } else {
-  console.log('Go work!');
+  console.log("Go work!");
 }
 
 export {};
