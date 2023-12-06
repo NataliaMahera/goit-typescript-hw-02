@@ -8,16 +8,23 @@ type AllType = {
   name: string;
   position: number;
   color: string;
-  weight: number
-}
+  weight: number;
+};
+// Pick<T, K>
 
-function compare (top, bottom): AllType {
+// створюємо новий тип методом Pick, який звязує логіку між собою, базується на існуючих ключах
+// поля обєктів top, bottom належать-(інструкція перевірки приналежності типів keyof) типу AllType
+
+function compare<T extends AllType, B extends AllType>(
+  top: Pick<T, keyof AllType>,
+  bottom: Pick<B, keyof AllType>
+): AllType {
   return {
     name: top.name,
     color: top.color,
     position: bottom.position,
     weight: bottom.weight,
-  }
+  };
 }
 
 export {};

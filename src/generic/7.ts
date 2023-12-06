@@ -4,16 +4,20 @@
 */
 
 export enum UserRole {
-  admin = 'admin',
-  editor = 'editor',
-  guest = 'guest',
+  admin = "admin",
+  editor = "editor",
+  guest = "guest",
 }
 
-// Замініть наступний код на версію за допомогою Record
-const RoleDescription = {
-  admin: 'Admin User',
-  editor: 'Editor User',
-  guest: 'Guest User',
+// Record<T, K>, динамічне додавання даних
+// enum не можна динамічно додати дані, стала незмінна колекція даних
+
+// Замініть наступний код на версію за допомогою Record, динамічне додавання даних
+
+const RoleDescription: Record<UserRole, string> = {
+  [UserRole.admin]: "Admin User",
+  [UserRole.editor]: "Editor User",
+  [UserRole.guest]: "Guest User",
 };
 
 export {};
